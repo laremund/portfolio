@@ -1,0 +1,25 @@
+/* Color Scheme */
+
+:root {
+    --primary-text: #333333;
+    --accent: #2E8B57;
+    --secondary-text: #666666;
+    --secondary-background: #F5F8F6;
+    --border: #E1E8E4;
+}
+
+h1 {
+    color: var(--primary-text);
+}
+
+h2 {
+    color: var(--accent);
+}
+
+h3 {
+    color: var(--secondary-text);
+}
+
+p {
+    color: var(--primary-text);
+}
