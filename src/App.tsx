@@ -1,4 +1,6 @@
 import './App.css'
+import ExperienceCard from './components/ExperienceCard/ExperienceCard'
+import { experienceData } from './components/ExperienceCard/experience'
 
 function App() {
   return (
@@ -90,69 +92,16 @@ function App() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Experience</h2>
           <div className="space-y-8">
-            {/* Revmatics */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900">Software Engineer</h3>
-                  <p className="text-blue-600 font-medium">Revmatics, Inc.</p>
-                  <p className="text-gray-600">Lehi, Utah</p>
-                </div>
-                <span className="text-gray-500 mt-2 md:mt-0">May 2025 – Sept 2025</span>
-              </div>
-              <ul className="text-gray-600 space-y-2">
-                <li>• Developed, tested, and deployed website features in preparation for app demos and releases</li>
-                <li>• Collaborated closely with Product and Design teams to make UX/UI decisions</li>
-              </ul>
-            </div>
-
-            {/* Nerd United Front-End */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900">Front-End Engineering Intern</h3>
-                  <p className="text-blue-600 font-medium">Nerd United</p>
-                  <p className="text-gray-600">Lehi, Utah</p>
-                </div>
-                <span className="text-gray-500 mt-2 md:mt-0">May 2023 – Aug 2023</span>
-              </div>
-              <ul className="text-gray-600 space-y-2">
-                <li>• Developed and deployed website features (wallet creation, checkout/card, payments) for an interface with 25k+ users that generated $20m+ in revenue</li>
-                <li>• Worked in an Agile scrum team – Jira, Github, AWS</li>
-              </ul>
-            </div>
-
-            {/* Nerd United QA */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900">Quality Assurance Intern</h3>
-                  <p className="text-blue-600 font-medium">Nerd United</p>
-                  <p className="text-gray-600">Lehi, Utah</p>
-                </div>
-                <span className="text-gray-500 mt-2 md:mt-0">May 2022 – Aug 2022</span>
-              </div>
-              <ul className="text-gray-600 space-y-2">
-                <li>• Automated testing using JavaScript and Python and coordinated with a scrum team to prepare for product releases</li>
-                <li>• Extensively tested new and existing website features</li>
-              </ul>
-            </div>
-
-            {/* USU Lab Support */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900">Lab Support Representative</h3>
-                  <p className="text-blue-600 font-medium">USU College of Electrical and Computer Engineering</p>
-                  <p className="text-gray-600">Logan, Utah</p>
-                </div>
-                <span className="text-gray-500 mt-2 md:mt-0">Mar 2022 – May 2025</span>
-              </div>
-              <ul className="text-gray-600 space-y-2">
-                <li>• Managed store website updates and ran the store using Computer and Electrical Engineering knowledge</li>
-                <li>• Facilitated labs and projects with professors and grad students</li>
-              </ul>
-            </div>
+            {experienceData.map((experience, index) => (
+              <ExperienceCard
+                key={index}
+                title={experience.title}
+                company={experience.company}
+                location={experience.location}
+                duration={experience.duration}
+                responsibilities={experience.responsibilities}
+              />
+            ))}
           </div>
         </div>
       </section>
