@@ -1,6 +1,8 @@
 import './App.css'
 import ExperienceCard from './components/ExperienceCard/ExperienceCard'
 import { experienceData } from './components/ExperienceCard/experience'
+import PortfolioCard from './components/PortfolioCard/PortfolioCard'
+import { portfolioData } from './components/PortfolioCard/portfolio'
 
 function App() {
   return (
@@ -156,143 +158,17 @@ function App() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Portfolio</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Project 1 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden portfolio-card">
-              <div className="bg-gradient-to-r from-blue-500 to-purple-600 h-48 flex items-center justify-center">
-                <span className="text-white text-lg font-semibold">E-Commerce Platform</span>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">Modern Shopping Experience</h3>
-                <p className="text-gray-600 mb-4">
-                  A full-stack e-commerce platform built with React, TypeScript, and Node.js. 
-                  Features include user authentication, payment processing, and inventory management.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React</span>
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">TypeScript</span>
-                  <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Node.js</span>
-                </div>
-                <div className="flex gap-4">
-                  <a href="#" className="text-blue-600 hover:text-blue-800 font-medium">Live Demo</a>
-                  <a href="#" className="text-gray-600 hover:text-gray-800 font-medium">GitHub</a>
-                </div>
-              </div>
-            </div>
-
-            {/* Project 2 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden portfolio-card">
-              <div className="bg-gradient-to-r from-green-500 to-teal-600 h-48 flex items-center justify-center">
-                <span className="text-white text-lg font-semibold">Task Management App</span>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">Team Collaboration Tool</h3>
-                <p className="text-gray-600 mb-4">
-                  A collaborative task management application with real-time updates, 
-                  drag-and-drop functionality, and team communication features.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React</span>
-                  <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Firebase</span>
-                  <span className="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">CSS3</span>
-                </div>
-                <div className="flex gap-4">
-                  <a href="#" className="text-blue-600 hover:text-blue-800 font-medium">Live Demo</a>
-                  <a href="#" className="text-gray-600 hover:text-gray-800 font-medium">GitHub</a>
-                </div>
-              </div>
-            </div>
-
-            {/* Project 3 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden portfolio-card">
-              <div className="bg-gradient-to-r from-purple-500 to-pink-600 h-48 flex items-center justify-center">
-                <span className="text-white text-lg font-semibold">Weather Dashboard</span>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">Interactive Weather App</h3>
-                <p className="text-gray-600 mb-4">
-                  A responsive weather dashboard with location-based forecasts, 
-                  interactive maps, and detailed weather analytics.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
-                  <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">API Integration</span>
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Chart.js</span>
-                </div>
-                <div className="flex gap-4">
-                  <a href="#" className="text-blue-600 hover:text-blue-800 font-medium">Live Demo</a>
-                  <a href="#" className="text-gray-600 hover:text-gray-800 font-medium">GitHub</a>
-                </div>
-              </div>
-            </div>
-
-            {/* Project 4 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden portfolio-card">
-              <div className="bg-gradient-to-r from-red-500 to-orange-600 h-48 flex items-center justify-center">
-                <span className="text-white text-lg font-semibold">Social Media Dashboard</span>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">Analytics Platform</h3>
-                <p className="text-gray-600 mb-4">
-                  A comprehensive social media analytics dashboard with data visualization, 
-                  content scheduling, and performance tracking across multiple platforms.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React</span>
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Python</span>
-                  <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">D3.js</span>
-                </div>
-                <div className="flex gap-4">
-                  <a href="#" className="text-blue-600 hover:text-blue-800 font-medium">Live Demo</a>
-                  <a href="#" className="text-gray-600 hover:text-gray-800 font-medium">GitHub</a>
-                </div>
-              </div>
-            </div>
-
-            {/* Project 5 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden portfolio-card">
-              <div className="bg-gradient-to-r from-indigo-500 to-blue-600 h-48 flex items-center justify-center">
-                <span className="text-white text-lg font-semibold">Mobile Banking App</span>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">Financial Management</h3>
-                <p className="text-gray-600 mb-4">
-                  A secure mobile banking application with biometric authentication, 
-                  transaction history, and budget tracking features.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React Native</span>
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Node.js</span>
-                  <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Security</span>
-                </div>
-                <div className="flex gap-4">
-                  <a href="#" className="text-blue-600 hover:text-blue-800 font-medium">Live Demo</a>
-                  <a href="#" className="text-gray-600 hover:text-gray-800 font-medium">GitHub</a>
-                </div>
-              </div>
-            </div>
-
-            {/* Project 6 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden portfolio-card">
-              <div className="bg-gradient-to-r from-teal-500 to-green-600 h-48 flex items-center justify-center">
-                <span className="text-white text-lg font-semibold">Learning Platform</span>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">Online Education Hub</h3>
-                <p className="text-gray-600 mb-4">
-                  An interactive learning platform with video streaming, progress tracking, 
-                  and collaborative features for online education.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Vue.js</span>
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">MongoDB</span>
-                  <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">WebRTC</span>
-                </div>
-                <div className="flex gap-4">
-                  <a href="#" className="text-blue-600 hover:text-blue-800 font-medium">Live Demo</a>
-                  <a href="#" className="text-gray-600 hover:text-gray-800 font-medium">GitHub</a>
-                </div>
-              </div>
-            </div>
+            {portfolioData.map((project, index) => (
+              <PortfolioCard
+                key={index}
+                title={project.title}
+                description={project.description}
+                technologies={project.technologies}
+                gradientFrom={project.gradientFrom}
+                gradientTo={project.gradientTo}
+                projectName={project.projectName}
+              />
+            ))}
           </div>
         </div>
       </section>
