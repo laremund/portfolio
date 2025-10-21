@@ -1,3 +1,5 @@
+import Button from '../Button/Button';
+
 interface PortfolioCardProps {
   title: string;
   description: string;
@@ -47,8 +49,8 @@ export default function PortfolioCard({
           })}
         </div>
         <div className="flex gap-4">
-          <a href="#" className="text-blue-600 hover:text-blue-800 font-medium">Live Demo</a>
-          <a href="#" className="text-gray-600 hover:text-gray-800 font-medium">GitHub</a>
+          <Button href="#" variant="ghost">Live Demo</Button>
+          <Button href="#" variant="ghost" className="text-gray-600 hover:text-gray-800">GitHub</Button>
         </div>
       </div>
     </div>
