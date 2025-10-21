@@ -3,6 +3,7 @@ import ExperienceCard from './components/ExperienceCard/ExperienceCard'
 import { experienceData } from './components/ExperienceCard/experience'
 import PortfolioCard from './components/PortfolioCard/PortfolioCard'
 import { portfolioData } from './components/PortfolioCard/portfolio'
+import Button from './components/Button/Button'
 
 function App() {
   return (
@@ -48,12 +49,12 @@ function App() {
             and full-stack development. Passionate about creating user-centered digital experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#portfolio" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Button href="#portfolio" variant="primary" size="lg">
               View My Work
-            </a>
-            <a href="#contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+            </Button>
+            <Button href="#contact" variant="outline" size="lg">
               Get In Touch
-            </a>
+            </Button>
           </div>
         </div>
       </section>
@@ -201,14 +202,12 @@ function App() {
                 </div>
               </div>
               <div className="flex space-x-4 mt-8">
-                <a href="https://www.linkedin.com/in/lars-remund-347a10213/" target="_blank" rel="noopener noreferrer" 
-                   className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                <Button href="https://www.linkedin.com/in/lars-remund-347a10213/" target="_blank" rel="noopener noreferrer" variant="primary">
                   LinkedIn
-                </a>
-                <a href="https://github.com/laremund" target="_blank" rel="noopener noreferrer" 
-                   className="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-900 transition-colors">
+                </Button>
+                <Button href="https://github.com/laremund" target="_blank" rel="noopener noreferrer" variant="secondary">
                   GitHub
-                </a>
+                </Button>
               </div>
             </div>
             <div className="bg-gray-100 rounded-lg p-8">
@@ -226,10 +225,9 @@ function App() {
                   <textarea rows={4} placeholder="Your Message" 
                             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
                 </div>
-                <button type="submit" 
-                        className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                <Button type="submit" variant="primary" className="w-full">
                   Send Message
-                </button>
+                </Button>
               </form>
             </div>
           </div>
