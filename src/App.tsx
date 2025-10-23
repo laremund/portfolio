@@ -41,7 +41,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-blue-600 to-purple-700 text-white">
+      <section className="pt-30 pb-16 bg-gradient-to-br from-blue-600 to-purple-700 text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Lars Remund</h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90">Software Engineer & UX/UI Designer</p>
