@@ -1,14 +1,14 @@
 import type { SkillChipProps } from './skill';
 
 const colorVariants = {
-  blue: 'bg-blue-100 text-blue-800',
-  green: 'bg-green-100 text-green-800',
-  purple: 'bg-purple-100 text-purple-800',
-  orange: 'bg-orange-100 text-orange-800',
-  pink: 'bg-pink-100 text-pink-800',
-  yellow: 'bg-yellow-100 text-yellow-800',
-  red: 'bg-red-100 text-red-800',
-  indigo: 'bg-indigo-100 text-indigo-800'
+  blue: { backgroundColor: '#0969da', color: '#ffffff' },
+  green: { backgroundColor: '#1a7f37', color: '#ffffff' },
+  purple: { backgroundColor: '#8250df', color: '#ffffff' },
+  orange: { backgroundColor: '#bf8700', color: '#ffffff' },
+  pink: { backgroundColor: '#bf3989', color: '#ffffff' },
+  yellow: { backgroundColor: '#9a6700', color: '#ffffff' },
+  red: { backgroundColor: '#da3633', color: '#ffffff' },
+  indigo: { backgroundColor: '#6f42c1', color: '#ffffff' }
 };
 
 const sizeVariants = {
@@ -23,7 +23,10 @@ export default function SkillChip({
   size = 'md' 
 }: SkillChipProps) {
   return (
-    <span className={`${colorVariants[variant]} ${sizeVariants[size]} rounded-full font-medium`}>
+    <span 
+      className={`${sizeVariants[size]} rounded-full font-medium`}
+      style={colorVariants[variant]}
+    >
       {skill}
     </span>
   );
