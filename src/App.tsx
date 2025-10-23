@@ -4,6 +4,7 @@ import { experienceData } from './components/ExperienceCard/experience'
 import PortfolioCard from './components/PortfolioCard/PortfolioCard'
 import { portfolioData } from './components/PortfolioCard/portfolio'
 import Button from './components/Button/Button'
+import SkillChip from './components/SkillChip/SkillChip'
 
 function App() {
   return (
@@ -77,10 +78,10 @@ function App() {
                 I'm always eager to learn new technologies and contribute to meaningful projects.
               </p>
               <div className="flex flex-wrap gap-4">
-                <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">React</span>
-                <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">TypeScript</span>
-                <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">UX/UI Design</span>
-                <span className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-medium">Python</span>
+                <SkillChip skill="React" variant="blue" />
+                <SkillChip skill="TypeScript" variant="green" />
+                <SkillChip skill="UX/UI Design" variant="purple" />
+                <SkillChip skill="Python" variant="orange" />
               </div>
             </div>
             <div className="bg-gray-200 h-80 rounded-lg flex items-center justify-center">
