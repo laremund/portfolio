@@ -71,6 +71,7 @@ textarea:focus {
   animation-delay: 1s;
 }
 
+
 /* Mobile menu styles */
 @media (max-width: 768px) {
   .mobile-menu {
@@ -79,5 +80,14 @@ textarea:focus {
   
   .mobile-menu.active {
     display: block;
+  }
+  
+  /* Reduce animation intensity on mobile */
+  .hero-background::after {
+    background-size: 40px 40px;
+  }
+  
+  .floating-shape {
+    opacity: 0.05;
   }
 }

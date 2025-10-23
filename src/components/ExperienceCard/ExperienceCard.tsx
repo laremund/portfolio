@@ -14,16 +14,16 @@ export default function ExperienceCard({
   responsibilities 
 }: ExperienceCardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-md p-6">
+    <div className="rounded-lg p-6" style={{backgroundColor: '#161b22', boxShadow: '0 10px 25px rgba(0, 0, 0, 0.5), 0 4px 10px rgba(0, 0, 0, 0.3)'}}>
       <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
         <div>
-          <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
-          <p className="text-blue-600 font-medium">{company}</p>
-          <p className="text-gray-600">{location}</p>
+          <h3 className="text-xl font-semibold" style={{color: '#ffffff'}}>{title}</h3>
+          <p className="font-medium" style={{color: '#4fc1ff'}}>{company}</p>
+          <p style={{color: '#f0f6fc'}}>{location}</p>
         </div>
-        <span className="text-gray-500 mt-2 md:mt-0">{duration}</span>
+        <span className="mt-2 md:mt-0" style={{color: '#7d8590'}}>{duration}</span>
       </div>
-      <ul className="text-gray-600 space-y-2">
+      <ul className="space-y-2" style={{color: '#f0f6fc'}}>
         {responsibilities.map((responsibility, index) => (
           <li key={index}>• {responsibility}</li>
         ))}

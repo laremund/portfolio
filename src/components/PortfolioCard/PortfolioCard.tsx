@@ -20,13 +20,13 @@ export default function PortfolioCard({
   projectName 
 }: PortfolioCardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden portfolio-card">
+    <div className="rounded-lg overflow-hidden portfolio-card" style={{backgroundColor: '#161b22', boxShadow: '0 10px 25px rgba(0, 0, 0, 0.5), 0 4px 10px rgba(0, 0, 0, 0.3)'}}>
       <div className={`bg-gradient-to-r ${gradientFrom} ${gradientTo} h-48 flex items-center justify-center`}>
         <span className="text-white text-lg font-semibold">{projectName}</span>
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2 text-gray-900">{title}</h3>
-        <p className="text-gray-600 mb-4">
+        <h3 className="text-xl font-semibold mb-2" style={{color: '#ffffff'}}>{title}</h3>
+        <p className="mb-4" style={{color: '#f0f6fc'}}>
           {description}
         </p>
         <div className="flex flex-wrap gap-2 mb-4">
@@ -43,7 +43,7 @@ export default function PortfolioCard({
         </div>
         <div className="flex gap-4">
           <Button href="#" variant="ghost">Live Demo</Button>
-          <Button href="#" variant="ghost" className="text-gray-600 hover:text-gray-800">GitHub</Button>
+          <Button href="#" variant="ghost">GitHub</Button>
         </div>
       </div>
     </div>
