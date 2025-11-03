@@ -1,8 +1,8 @@
 import './App.css'
 import ExperienceCard from './components/ExperienceCard/ExperienceCard'
 import { experienceData } from './components/ExperienceCard/experience'
-import PortfolioCard from './components/PortfolioCard/PortfolioCard'
-import { portfolioData } from './components/PortfolioCard/portfolio'
+// import PortfolioCard from './components/PortfolioCard/PortfolioCard'
+// import { portfolioData } from './components/PortfolioCard/portfolio'
 import Button from './components/Button/Button'
 import SkillChip from './components/SkillChip/SkillChip'
 
@@ -18,7 +18,7 @@ function App() {
               <a href="#about" className="transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>About</a>
               <a href="#experience" className="transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>Experience</a>
               <a href="#skills" className="transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>Skills</a>
-              <a href="#portfolio" className="transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>Portfolio</a>
+              {/* <a href="#portfolio" className="transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>Portfolio</a> */}
               <a href="#contact" className="transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>Contact</a>
             </div>
             <button className="md:hidden transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>
@@ -156,7 +156,7 @@ function App() {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-16" style={{backgroundColor: '#161b22'}}>
+      {/* <section id="portfolio" className="py-16" style={{backgroundColor: '#161b22'}}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-12" style={{color: '#ffffff'}}>Portfolio</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -173,72 +173,40 @@ function App() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
-      <section id="contact" className="py-16" style={{backgroundColor: '#0d1117'}}>
+      <section id="contact" className="py-16" style={{backgroundColor: '#161b22'}}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-12" style={{color: '#ffffff'}}>Get In Touch</h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-semibold mb-6" style={{color: '#ffffff'}}>Let's Connect</h3>
-              <p className="text-lg mb-8" style={{color: '#f0f6fc'}}>
-                I'm always interested in new opportunities and exciting projects. 
-                Whether you have a question or just want to say hi, I'll try my best to get back to you!
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <span className="text-2xl mr-4">📧</span>
-                  <a href="mailto:larsremund2@gmail.com" className="transition-colors" style={{color: '#4fc1ff'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#6bb6ff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#4fc1ff'}>
-                    larsremund2@gmail.com
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <span className="text-2xl mr-4">📱</span>
-                  <span style={{color: '#f0f6fc'}}>(636) 634-1260</span>
-                </div>
-                <div className="flex items-center">
-                  <span className="text-2xl mr-4">📍</span>
-                  <span style={{color: '#f0f6fc'}}>Pleasant Grove, UT</span>
-                </div>
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="text-lg mb-8" style={{color: '#f0f6fc'}}>
+              I'm always interested in new opportunities and exciting projects. 
+              Whether you have a question or just want to say hi, I'll try my best to get back to you!
+            </p>
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center justify-center">
+                <span className="text-2xl mr-4">📧</span>
+                <a href="mailto:larsremund2@gmail.com" className="transition-colors" style={{color: '#4fc1ff'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#6bb6ff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#4fc1ff'}>
+                  larsremund2@gmail.com
+                </a>
               </div>
-              <div className="flex space-x-4 mt-8">
-                <Button href="https://www.linkedin.com/in/lars-remund-347a10213/" target="_blank" rel="noopener noreferrer" variant="primary">
-                  LinkedIn
-                </Button>
-                <Button href="https://github.com/laremund" target="_blank" rel="noopener noreferrer" variant="secondary">
-                  GitHub
-                </Button>
+              <div className="flex items-center justify-center">
+                <span className="text-2xl mr-4">📱</span>
+                <span style={{color: '#f0f6fc'}}>(636) 634-1260</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <span className="text-2xl mr-4">📍</span>
+                <span style={{color: '#f0f6fc'}}>Pleasant Grove, UT</span>
               </div>
             </div>
-            <div className="rounded-lg p-8" style={{backgroundColor: '#161b22'}}>
-              <h4 className="text-xl font-semibold mb-6" style={{color: '#ffffff'}}>Quick Message</h4>
-              <form className="space-y-4">
-                <div>
-                  <input type="text" placeholder="Your Name" 
-                         className="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2" 
-                         style={{backgroundColor: '#21262d', border: '1px solid #21262d', color: '#f0f6fc'}} 
-                         onFocus={(e) => (e.target as HTMLInputElement).style.borderColor = '#0969da'} 
-                         onBlur={(e) => (e.target as HTMLInputElement).style.borderColor = '#21262d'} />
-                </div>
-                <div>
-                  <input type="email" placeholder="Your Email" 
-                         className="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2" 
-                         style={{backgroundColor: '#21262d', border: '1px solid #21262d', color: '#f0f6fc'}} 
-                         onFocus={(e) => (e.target as HTMLInputElement).style.borderColor = '#0969da'} 
-                         onBlur={(e) => (e.target as HTMLInputElement).style.borderColor = '#21262d'} />
-                </div>
-                <div>
-                  <textarea rows={4} placeholder="Your Message" 
-                            className="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2" 
-                            style={{backgroundColor: '#21262d', border: '1px solid #21262d', color: '#f0f6fc'}} 
-                            onFocus={(e) => (e.target as HTMLTextAreaElement).style.borderColor = '#0969da'} 
-                            onBlur={(e) => (e.target as HTMLTextAreaElement).style.borderColor = '#21262d'}></textarea>
-                </div>
-                <Button type="submit" variant="primary" className="w-full">
-                  Send Message
-                </Button>
-              </form>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button href="https://www.linkedin.com/in/lars-remund-347a10213/" target="_blank" rel="noopener noreferrer" variant="primary">
+                LinkedIn
+              </Button>
+              <Button href="https://github.com/laremund" target="_blank" rel="noopener noreferrer" variant="secondary">
+                GitHub
+              </Button>
             </div>
           </div>
         </div>
