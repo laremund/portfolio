@@ -19,9 +19,9 @@ export default function ExperienceCard({
         <div>
           <h3 className="text-xl font-semibold" style={{color: '#ffffff'}}>{title}</h3>
           <p className="font-medium" style={{color: '#4fc1ff'}}>{company}</p>
-          <p style={{color: '#f0f6fc'}}>{location}</p>
+          <p className="italic" style={{color: '#f0f6fc'}}>{location}</p>
         </div>
-        <span className="mt-2 md:mt-0" style={{color: '#7d8590'}}>{duration}</span>
+        <span className="mt-2 md:mt-0 italic" style={{color: '#7d8590'}}>{duration}</span>
       </div>
       <ul className="space-y-2" style={{color: '#f0f6fc'}}>
         {responsibilities.map((responsibility, index) => (

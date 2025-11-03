@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="min-h-screen" style={{backgroundColor: '#0d1117'}}>
       {/* Navigation */}
-      <nav className="fixed top-0 w-full shadow-sm z-50" style={{backgroundColor: '#161b22'}}>
+      <nav className="fixed top-0 w-full z-50" style={{backgroundColor: '#161b22', boxShadow: '0 4px 10px -2px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3)'}}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="text-2xl font-bold" style={{color: '#cccccc'}}>Lars Remund</div>
@@ -18,6 +18,7 @@ function App() {
               <a href="#about" className="transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>About</a>
               <a href="#experience" className="transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>Experience</a>
               <a href="#skills" className="transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>Skills</a>
+              {/* TODO: uncomment this when portfolio is ready */}
               {/* <a href="#portfolio" className="transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>Portfolio</a> */}
               <a href="#contact" className="transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>Contact</a>
             </div>
@@ -51,7 +52,7 @@ function App() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="#experience" variant="primary" size="lg">
-              My Work Experience
+              See Work Experience
             </Button>
             <Button href="#contact" variant="outline" size="lg">
               Get In Touch
@@ -159,6 +160,7 @@ function App() {
       </section>
 
       {/* Portfolio Section */}
+      {/* TODO: uncomment this when portfolio is ready */}
       {/* <section id="portfolio" className="py-16" style={{backgroundColor: '#161b22'}}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-12" style={{color: '#ffffff'}}>Portfolio</h2>
