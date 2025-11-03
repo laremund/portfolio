@@ -46,12 +46,12 @@ function App() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Lars Remund</h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90">Software Engineer & UX/UI Designer</p>
           <p className="text-lg mb-8 max-w-3xl mx-auto">
-            Human Experience Design and Computer Science student with experience in React, TypeScript, 
-            and full-stack development. Passionate about creating user-centered digital experiences.
+            I specialize in software development and design and I have experience in React, TypeScript, 
+            and full-stack development. I'm passionate about creating user-centered digital experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="#portfolio" variant="primary" size="lg">
-              View My Work
+            <Button href="#experience" variant="primary" size="lg">
+              My Work Experience
             </Button>
             <Button href="#contact" variant="outline" size="lg">
               Get In Touch
@@ -67,8 +67,11 @@ function App() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-lg mb-6" style={{color: '#f0f6fc'}}>
-                I'm a Human Experience Design and Computer Science student at Utah State University, 
-                passionate about creating digital experiences that are both beautiful and functional. 
+                I recently graduated from Utah State University with a degree in Human Experience Design
+                with a Computer Science emphasis.
+              </p>
+              <p className="text-lg mb-6" style={{color: '#f0f6fc'}}>
+                I'm passionate about creating digital experiences that are both beautiful and functional. 
                 With experience in front-end development and UX/UI design, I bridge the gap between 
                 design and development.
               </p>

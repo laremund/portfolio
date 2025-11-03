@@ -11,7 +11,7 @@ export const experienceData: ExperienceData[] = [
     title: "Software Engineer",
     company: "Revmatics, Inc.",
     location: "Lehi, Utah",
-    duration: "May 2025 – Sept 2025",
+    duration: "May 2025 – Sep 2025",
     responsibilities: [
       "Developed, tested, and deployed website features in preparation for app demos and releases",
       "Collaborated closely with Product and Design teams to make UX/UI decisions"
