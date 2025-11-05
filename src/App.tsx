@@ -5,6 +5,7 @@ import { experienceData } from './components/ExperienceCard/experience'
 // import { portfolioData } from './components/PortfolioCard/portfolio'
 import Button from './components/Button/Button'
 import SkillChip from './components/SkillChip/SkillChip'
+import profilePhoto from './assets/profile.jpeg'
 
 function App() {
   return (
@@ -88,8 +89,10 @@ function App() {
                 <SkillChip skill="Python" variant="orange" />
               </div>
             </div>
-            <div className="h-80 rounded-lg flex items-center justify-center" style={{backgroundColor: '#161b22'}}>
-              <span className="text-lg" style={{color: '#7d8590'}}>Professional Photo Placeholder</span>
+            <div className="flex items-center justify-center">
+              <div className="w-100 h-100 rounded-lg overflow-hidden flex items-center justify-center">
+                <img src={profilePhoto} alt="Professional Photo" className="w-full h-full object-cover" />
+              </div>
             </div>
           </div>
         </div>
