@@ -279,7 +279,7 @@ function App() {
       {/* Snake Game */}
       {showGame && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" style={{backgroundColor: 'rgba(0, 0, 0, 0.75)'}}>
-          <div className="relative bg-gray-950 rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-auto">
+          <div className="relative rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-auto" style={{backgroundColor: '#0d1117'}}>
             <button
               onClick={() => setShowGame(false)}
               className="absolute top-4 right-4 z-10 p-2 rounded transition-colors cursor-pointer"
