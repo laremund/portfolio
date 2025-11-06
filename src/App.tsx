@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import './App.css'
 import ExperienceCard from './components/ExperienceCard/ExperienceCard'
 import { experienceData } from './components/ExperienceCard/experience'
@@ -5,9 +6,22 @@ import { experienceData } from './components/ExperienceCard/experience'
 // import { portfolioData } from './components/PortfolioCard/portfolio'
 import Button from './components/Button/Button'
 import SkillChip from './components/SkillChip/SkillChip'
+import SnakeGame from './components/SnakeGame/SnakeGame'
 import profilePhoto from './assets/profile.jpeg'
 
 function App() {
+
+  const [showPopup, setShowPopup] = useState(false)
+  const [showGame, setShowGame] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(true)
+    }, 5000)
+
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <div className="min-h-screen" style={{backgroundColor: '#0d1117'}}>
       {/* Navigation */}
@@ -219,6 +233,55 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Snake Game Popup */}
+      {showPopup && !showGame && (
+        <div
+          className="fixed bottom-4 right-4 z-50 p-4 rounded-lg shadow-lg"
+          style={{
+            backgroundColor: '#161b22',
+            border: '1px solid #21262d',
+            minWidth: '280px',
+            maxWidth: '320px',
+          }}
+        >
+          <div className="flex justify-between items-start mb-3">
+              <p className="text-2xl" style={{color: '#f0f6fc'}}>
+                Bored?
+              </p>                  
+            <button
+              onClick={() => setShowPopup(false)}
+              className="ml-2 flex-shrink-0 transition-colors cursor-pointer"
+              style={{color: '#8b949e'}}
+              onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'}
+              onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#8b949e'}
+              aria-label="Close popup"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <Button
+            variant="primary"
+            size="lg"
+            className="w-full"
+            onClick={() => {
+              setShowGame(true)
+              setShowPopup(false)
+            }}
+          >
+            Play a Game Instead
+          </Button>
+        </div>
+      )}
+
+      {/* Snake Game */}
+      {showGame && (
+        <div className="fixed inset-0 z-[100]">
+          <SnakeGame />
+        </div>
+      )}
     </div>
   )
 }
