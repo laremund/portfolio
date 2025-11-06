@@ -147,14 +147,14 @@ export default function SnakeGame() {
             key={`${x}-${y}`}
             className="w-5 h-5"
             style={{
-              border: '1px solid #21262d',
+              border: '1px solid #161b22',
               backgroundColor: isHead
                 ? '#1a7f37'
                 : isSnake
                 ? '#238636'
                 : isFood
                 ? '#8250df'
-                : '#0d1117',
+                : '#010409',
             }}
           />
         );
@@ -167,7 +167,7 @@ export default function SnakeGame() {
     <div className="flex flex-col items-center justify-center p-4" style={{backgroundColor: '#0d1117'}}>
       <div className="mb-4 text-center">
         <h1 className="text-4xl font-bold mb-2" style={{color: '#ffffff'}}>Snake</h1>
-        <p className="text-lg" style={{color: '#f0f6fc'}}>Score: {score}</p>
+        <p className="text-lg" style={{color: '#8b949e'}}>Score: {score}</p>
       </div>
 
       <div
@@ -202,7 +202,6 @@ export default function SnakeGame() {
           <div className="absolute inset-0 flex items-center justify-center" style={{backgroundColor: 'rgba(0, 0, 0, 0.75)'}}>
             <div className="text-center" style={{color: '#ffffff'}}>
               <p className="text-4xl font-bold mb-4">Game Over!</p>
-              {/* <p className="text-lg mb-4" style={{color: '#f0f6fc'}}>Final Score: {score}</p> */}
               <button
                 onClick={resetGame}
                 className="px-6 py-2 rounded-lg transition-colors cursor-pointer"
