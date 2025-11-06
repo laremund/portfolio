@@ -162,7 +162,7 @@ export default function SnakeGame() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-950 p-4">
+    <div className="flex flex-col items-center justify-center bg-gray-950 p-4">
       <div className="mb-4 text-center">
         <h1 className="text-4xl font-bold text-green-500 mb-2">Snake Game</h1>
         <p className="text-xl text-gray-300">Score: {score}</p>

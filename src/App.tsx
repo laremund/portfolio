@@ -265,7 +265,7 @@ function App() {
           <Button
             variant="primary"
             size="lg"
-            className="w-full"
+            className="w-full cursor-pointer"
             onClick={() => {
               setShowGame(true)
               setShowPopup(false)
@@ -278,8 +278,28 @@ function App() {
 
       {/* Snake Game */}
       {showGame && (
-        <div className="fixed inset-0 z-[100]">
-          <SnakeGame />
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" style={{backgroundColor: 'rgba(0, 0, 0, 0.75)'}}>
+          <div className="relative bg-gray-950 rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-auto">
+            <button
+              onClick={() => setShowGame(false)}
+              className="absolute top-4 right-4 z-10 p-2 rounded transition-colors cursor-pointer"
+              style={{color: '#8b949e', backgroundColor: 'rgba(22, 27, 34, 0.8)'}}
+              onMouseEnter={(e) => {
+                (e.target as HTMLElement).style.color = '#ffffff'
+                ;(e.target as HTMLElement).style.backgroundColor = 'rgba(22, 27, 34, 1)'
+              }}
+              onMouseLeave={(e) => {
+                (e.target as HTMLElement).style.color = '#8b949e'
+                ;(e.target as HTMLElement).style.backgroundColor = 'rgba(22, 27, 34, 0.8)'
+              }}
+              aria-label="Close game"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <SnakeGame />
+          </div>
         </div>
       )}
     </div>
