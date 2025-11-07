@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[#0d1117]">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-[#161b22] shadow-[0_4px_10px_-2px_rgba(0,0,0,0.4),0_2px_4px_-1px_rgba(0,0,0,0.3)]">
+      <nav className="fixed top-0 w-full z-50 bg-[#161b22] shadow-[0_4px_10px_-2px_#00000066,0_2px_4px_-1px_#0000004D]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="text-2xl font-bold text-[#cccccc]">Lars Remund</div>
@@ -273,7 +273,7 @@ function App() {
           <div className="relative rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-auto bg-[#0d1117]">
             <button
               onClick={() => setShowGame(false)}
-              className="absolute top-4 right-4 z-10 p-2 rounded transition-colors cursor-pointer text-[#8b949e] bg-[rgba(22,27,34,0.8)] hover:text-white hover:bg-[rgba(22,27,34,1)]"
+              className="absolute top-4 right-4 z-10 p-2 rounded transition-colors cursor-pointer text-[#8b949e] bg-[#161b22CC] hover:text-white hover:bg-[#161b22]"
               aria-label="Close game"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
