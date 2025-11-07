@@ -113,9 +113,9 @@ function App() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-16" style={{backgroundColor: '#161b22'}}>
+      <section id="experience" className="py-16 bg-[#161b22]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12" style={{color: '#ffffff'}}>Experience</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-white">Experience</h2>
           <div className="space-y-8">
             {experienceData.map((experience, index) => (
               <ExperienceCard
@@ -132,16 +132,16 @@ function App() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-16" style={{backgroundColor: '#0d1117'}}>
+      <section id="skills" className="py-16 bg-[#0d1117]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12" style={{color: '#ffffff'}}>Skills & Technologies</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-white">Skills & Technologies</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 skill-icon" style={{backgroundColor: '#0969da'}}>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 skill-icon bg-[#0969da]">
                 <span className="text-2xl">💻</span>
               </div>
-              <h3 className="text-xl font-semibold mb-4" style={{color: '#ffffff'}}>Frontend Development</h3>
-              <ul className="space-y-2" style={{color: '#f0f6fc'}}>
+              <h3 className="text-xl font-semibold mb-4 text-white">Frontend Development</h3>
+              <ul className="space-y-2 text-[#f0f6fc]">
                 <li>React & TypeScript</li>
                 <li>HTML, CSS, JavaScript</li>
                 <li>Vite & Modern Build Tools</li>
@@ -149,11 +149,11 @@ function App() {
               </ul>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 skill-icon" style={{backgroundColor: '#1a7f37'}}>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 skill-icon bg-[#1a7f37]">
                 <span className="text-2xl">🎨</span>
               </div>
-              <h3 className="text-xl font-semibold mb-4" style={{color: '#ffffff'}}>UX/UI Design</h3>
-              <ul className="space-y-2" style={{color: '#f0f6fc'}}>
+              <h3 className="text-xl font-semibold mb-4 text-white">UX/UI Design</h3>
+              <ul className="space-y-2 text-[#f0f6fc]">
                 <li>Figma & Adobe Creative Suite</li>
                 <li>User Research & Testing</li>
                 <li>Wireframing & Prototyping</li>
@@ -161,11 +161,11 @@ function App() {
               </ul>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 skill-icon" style={{backgroundColor: '#8250df'}}>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 skill-icon bg-[#8250df]">
                 <span className="text-2xl">⚙️</span>
               </div>
-              <h3 className="text-xl font-semibold mb-4" style={{color: '#ffffff'}}>Development Process</h3>
-              <ul className="space-y-2" style={{color: '#f0f6fc'}}>
+              <h3 className="text-xl font-semibold mb-4 text-white">Development Process</h3>
+              <ul className="space-y-2 text-[#f0f6fc]">
                 <li>Agile & Scrum Methodologies</li>
                 <li>Git & Version Control</li>
                 <li>Automated Testing</li>
