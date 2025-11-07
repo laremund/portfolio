@@ -25,19 +25,19 @@ function App() {
   return (
     <div className="min-h-screen" style={{backgroundColor: '#0d1117'}}>
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50" style={{backgroundColor: '#161b22', boxShadow: '0 4px 10px -2px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3)'}}>
+      <nav className="fixed top-0 w-full z-50 bg-[#161b22] shadow-[0_4px_10px_-2px_rgba(0,0,0,0.4),0_2px_4px_-1px_rgba(0,0,0,0.3)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <div className="text-2xl font-bold" style={{color: '#cccccc'}}>Lars Remund</div>
+            <div className="text-2xl font-bold text-[#cccccc]">Lars Remund</div>
             <div className="hidden md:flex space-x-8">
-              <a href="#about" className="transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>About</a>
-              <a href="#experience" className="transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>Experience</a>
-              <a href="#skills" className="transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>Skills</a>
+              <a href="#about" className="transition-colors text-[#cccccc] hover:text-white">About</a>
+              <a href="#experience" className="transition-colors text-[#cccccc] hover:text-white">Experience</a>
+              <a href="#skills" className="transition-colors text-[#cccccc] hover:text-white">Skills</a>
               {/* TODO: uncomment this when portfolio is ready */}
-              {/* <a href="#portfolio" className="transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>Portfolio</a> */}
-              <a href="#contact" className="transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>Contact</a>
+              {/* <a href="#portfolio" className="transition-colors text-[#cccccc] hover:text-white">Portfolio</a> */}
+              <a href="#contact" className="transition-colors text-[#cccccc] hover:text-white">Contact</a>
             </div>
-            <button className="md:hidden transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>
+            <button className="md:hidden transition-colors text-[#cccccc] hover:text-white">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
@@ -45,12 +45,12 @@ function App() {
           </div>
           {/* Mobile Menu */}
           <div className="md:hidden mobile-menu">
-            <div className="px-2 pt-2 pb-3 space-y-1 border-t" style={{backgroundColor: '#161b22', borderColor: '#21262d'}}>
-              <a href="#about" className="block px-3 py-2 transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>About</a>
-              <a href="#experience" className="block px-3 py-2 transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>Experience</a>
-              <a href="#skills" className="block px-3 py-2 transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>Skills</a>
-              <a href="#portfolio" className="block px-3 py-2 transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>Portfolio</a>
-              <a href="#contact" className="block px-3 py-2 transition-colors" style={{color: '#cccccc'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#cccccc'}>Contact</a>
+            <div className="px-2 pt-2 pb-3 space-y-1 border-t bg-[#161b22] border-[#21262d]">
+              <a href="#about" className="block px-3 py-2 transition-colors text-[#cccccc] hover:text-white">About</a>
+              <a href="#experience" className="block px-3 py-2 transition-colors text-[#cccccc] hover:text-white">Experience</a>
+              <a href="#skills" className="block px-3 py-2 transition-colors text-[#cccccc] hover:text-white">Skills</a>
+              <a href="#portfolio" className="block px-3 py-2 transition-colors text-[#cccccc] hover:text-white">Portfolio</a>
+              <a href="#contact" className="block px-3 py-2 transition-colors text-[#cccccc] hover:text-white">Contact</a>
             </div>
           </div>
         </div>
