@@ -54,6 +54,27 @@ textarea:focus {
   background-clip: text;
 }
 
+/* Snake game popup glow shadow */
+.snake-popup-shadow {
+  box-shadow: 0 20px 25px -5px #4fc1ff4d, 0 10px 10px -5px #4fc1ff33, 0 0 20px #4fc1ff1a;
+}
+
+/* Snake game popup animation */
+@keyframes snake-popup-enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.snake-popup-animate {
+  animation: snake-popup-enter 0.4s ease-out;
+}
+
 /* Mobile menu styles */
 @media (max-width: 768px) {
   .mobile-menu {

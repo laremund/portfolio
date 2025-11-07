@@ -237,7 +237,7 @@ function App() {
       {/* Snake Game Popup */}
       {showPopup && !showGame && (
         <div
-          className="hidden md:block fixed bottom-4 right-4 z-50 p-4 rounded-lg shadow-lg bg-[#161b22] border border-[#21262d] min-w-[280px] max-w-[320px]"
+          className="hidden md:block fixed bottom-5 right-5 z-50 p-4 rounded-lg bg-[#161b22] border-1 border-[#4fc1ff] min-w-[280px] max-w-[320px] backdrop-blur-sm snake-popup-shadow snake-popup-animate"
         >
           <div className="flex justify-between items-start mb-3">
               <p className="text-2xl text-[#f0f6fc]">
