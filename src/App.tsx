@@ -23,7 +23,7 @@ function App() {
   }, [])
 
   return (
-    <div className="min-h-screen" style={{backgroundColor: '#0d1117'}}>
+    <div className="min-h-screen bg-[#0d1117]">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-[#161b22] shadow-[0_4px_10px_-2px_rgba(0,0,0,0.4),0_2px_4px_-1px_rgba(0,0,0,0.3)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -178,9 +178,9 @@ function App() {
 
       {/* Portfolio Section */}
       {/* TODO: uncomment this when portfolio is ready */}
-      {/* <section id="portfolio" className="py-16" style={{backgroundColor: '#161b22'}}>
+      {/* <section id="portfolio" className="py-16 bg-[#161b22]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12" style={{color: '#ffffff'}}>Portfolio</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-white">Portfolio</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {portfolioData.map((project, index) => (
               <PortfolioCard
@@ -198,28 +198,28 @@ function App() {
       </section> */}
 
       {/* Contact Section */}
-      <section id="contact" className="py-16" style={{backgroundColor: '#161b22'}}>
+      <section id="contact" className="py-16 bg-[#161b22]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12" style={{color: '#ffffff'}}>Get In Touch</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-white">Get In Touch</h2>
           <div className="max-w-2xl mx-auto text-center">
-            <p className="text-lg mb-8" style={{color: '#f0f6fc'}}>
+            <p className="text-lg mb-8 text-[#f0f6fc]">
               I'm always interested in new opportunities and exciting projects. 
               Whether you have a question or just want to say hi, I'll try my best to get back to you!
             </p>
             <div className="space-y-4 mb-8">
               <div className="flex items-center justify-center">
                 <span className="text-2xl mr-4">📧</span>
-                <a href="mailto:larsremund2@gmail.com" className="transition-colors" style={{color: '#4fc1ff'}} onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#6bb6ff'} onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#4fc1ff'}>
+                <a href="mailto:larsremund2@gmail.com" className="transition-colors text-[#4fc1ff] hover:text-[#6bb6ff]">
                   larsremund2@gmail.com
                 </a>
               </div>
               <div className="flex items-center justify-center">
                 <span className="text-2xl mr-4">📱</span>
-                <span style={{color: '#f0f6fc'}}>(636) 634-1260</span>
+                <span className="text-[#f0f6fc]">(636) 634-1260</span>
               </div>
               <div className="flex items-center justify-center">
                 <span className="text-2xl mr-4">📍</span>
-                <span style={{color: '#f0f6fc'}}>Pleasant Grove, UT</span>
+                <span className="text-[#f0f6fc]">Pleasant Grove, UT</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -237,24 +237,15 @@ function App() {
       {/* Snake Game Popup */}
       {showPopup && !showGame && (
         <div
-          className="hidden md:block fixed bottom-4 right-4 z-50 p-4 rounded-lg shadow-lg"
-          style={{
-            backgroundColor: '#161b22',
-            border: '1px solid #21262d',
-            minWidth: '280px',
-            maxWidth: '320px',
-          }}
+          className="hidden md:block fixed bottom-4 right-4 z-50 p-4 rounded-lg shadow-lg bg-[#161b22] border border-[#21262d] min-w-[280px] max-w-[320px]"
         >
           <div className="flex justify-between items-start mb-3">
-              <p className="text-2xl" style={{color: '#f0f6fc'}}>
+              <p className="text-2xl text-[#f0f6fc]">
                 Bored?
               </p>                  
             <button
               onClick={() => setShowPopup(false)}
-              className="ml-2 flex-shrink-0 transition-colors cursor-pointer"
-              style={{color: '#8b949e'}}
-              onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'}
-              onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#8b949e'}
+              className="ml-2 flex-shrink-0 transition-colors cursor-pointer text-[#8b949e] hover:text-white"
               aria-label="Close popup"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -278,20 +269,11 @@ function App() {
 
       {/* Snake Game */}
       {showGame && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" style={{backgroundColor: 'rgba(0, 0, 0, 0.75)'}}>
-          <div className="relative rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-auto" style={{backgroundColor: '#0d1117'}}>
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/75">
+          <div className="relative rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-auto bg-[#0d1117]">
             <button
               onClick={() => setShowGame(false)}
-              className="absolute top-4 right-4 z-10 p-2 rounded transition-colors cursor-pointer"
-              style={{color: '#8b949e', backgroundColor: 'rgba(22, 27, 34, 0.8)'}}
-              onMouseEnter={(e) => {
-                (e.target as HTMLElement).style.color = '#ffffff'
-                ;(e.target as HTMLElement).style.backgroundColor = 'rgba(22, 27, 34, 1)'
-              }}
-              onMouseLeave={(e) => {
-                (e.target as HTMLElement).style.color = '#8b949e'
-                ;(e.target as HTMLElement).style.backgroundColor = 'rgba(22, 27, 34, 0.8)'
-              }}
+              className="absolute top-4 right-4 z-10 p-2 rounded transition-colors cursor-pointer text-[#8b949e] bg-[rgba(22,27,34,0.8)] hover:text-white hover:bg-[rgba(22,27,34,1)]"
               aria-label="Close game"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
