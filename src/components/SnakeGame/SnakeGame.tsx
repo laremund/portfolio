@@ -142,20 +142,19 @@ export default function SnakeGame() {
         const isHead = snake[0].x === x && snake[0].y === y;
         const isFood = food.x === x && food.y === y;
 
+        let bgColor = 'bg-[#010409]';
+        if (isHead) {
+          bgColor = 'bg-[#1a7f37]';
+        } else if (isSnake) {
+          bgColor = 'bg-[#238636]';
+        } else if (isFood) {
+          bgColor = 'bg-[#8250df]';
+        }
+
         cells.push(
           <div
             key={`${x}-${y}`}
-            className="w-5 h-5"
-            style={{
-              border: '1px solid #161b22',
-              backgroundColor: isHead
-                ? '#1a7f37'
-                : isSnake
-                ? '#238636'
-                : isFood
-                ? '#8250df'
-                : '#010409',
-            }}
+            className={`w-5 h-5 border border-[#161b22] ${bgColor}`}
           />
         );
       }
@@ -164,17 +163,15 @@ export default function SnakeGame() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-4" style={{backgroundColor: '#0d1117'}}>
+    <div className="flex flex-col items-center justify-center p-4 bg-[#0d1117]">
       <div className="mb-4 text-center">
-        <h1 className="text-4xl font-bold mb-2" style={{color: '#ffffff'}}>Snake</h1>
-        <p className="text-lg" style={{color: '#8b949e'}}>Score: {score}</p>
+        <h1 className="text-4xl font-bold mb-2 text-white">Snake</h1>
+        <p className="text-lg text-[#8b949e]">Score: {score}</p>
       </div>
 
       <div
-        className="relative grid gap-0 p-1 rounded-lg overflow-hidden"
+        className="relative grid gap-0 p-1 rounded-lg overflow-hidden bg-[#161b22] border border-[#21262d]"
         style={{
-          backgroundColor: '#161b22',
-          border: '1px solid #21262d',
           gridTemplateColumns: `repeat(${GRID_SIZE}, ${CELL_SIZE}px)`,
           width: `${GRID_SIZE * CELL_SIZE + 8}px`,
         }}
@@ -182,35 +179,29 @@ export default function SnakeGame() {
         {renderGrid()}
 
         {!isGameStarted && (
-          <div className="absolute inset-0 flex items-center justify-center" style={{backgroundColor: 'rgba(0, 0, 0, 0.75)'}}>
-            <div className="text-center" style={{color: '#ffffff'}}>
+          <div className="absolute inset-0 flex items-center justify-center bg-[#000000BF]">
+            <div className="text-center text-white">
               <p className="text-2xl mb-2">Press any arrow key to start</p>
             </div>
           </div>
         )}
 
         {isPaused && isGameStarted && (
-          <div className="absolute inset-0 flex items-center justify-center" style={{backgroundColor: 'rgba(0, 0, 0, 0.75)'}}>
-            <div className="text-center" style={{color: '#ffffff'}}>
+          <div className="absolute inset-0 flex items-center justify-center bg-[#000000BF]">
+            <div className="text-center text-white">
               <p className="text-2xl mb-2">Paused</p>
-              <p className="text-sm" style={{color: '#8b949e'}}>Press Space to continue</p>
+              <p className="text-sm text-[#8b949e]">Press Space to continue</p>
             </div>
           </div>
         )}
 
         {isGameOver && (
-          <div className="absolute inset-0 flex items-center justify-center" style={{backgroundColor: 'rgba(0, 0, 0, 0.75)'}}>
-            <div className="text-center" style={{color: '#ffffff'}}>
+          <div className="absolute inset-0 flex items-center justify-center bg-[#000000BF]">
+            <div className="text-center text-white">
               <p className="text-4xl font-bold mb-4">Game Over!</p>
               <button
                 onClick={resetGame}
-                className="px-6 py-2 rounded-lg transition-colors cursor-pointer"
-                style={{
-                  backgroundColor: '#0969da',
-                  color: '#ffffff',
-                }}
-                onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#0550ae'}
-                onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = '#0969da'}
+                className="px-6 py-2 rounded-lg transition-colors cursor-pointer bg-[#0969da] text-white hover:bg-[#0550ae]"
               >
                 Play Again
               </button>
@@ -219,7 +210,7 @@ export default function SnakeGame() {
         )}
       </div>
 
-      <div className="mt-4 text-center text-sm" style={{color: '#8b949e'}}>
+      <div className="mt-4 text-center text-sm text-[#8b949e]">
         <p>Use arrow keys to move</p>
         <p>Press Space to pause</p>
       </div>
