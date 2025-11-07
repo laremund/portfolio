@@ -237,7 +237,7 @@ function App() {
       {/* Snake Game Popup */}
       {showPopup && !showGame && (
         <div
-          className="fixed bottom-4 right-4 z-50 p-4 rounded-lg shadow-lg"
+          className="hidden md:block fixed bottom-4 right-4 z-50 p-4 rounded-lg shadow-lg"
           style={{
             backgroundColor: '#161b22',
             border: '1px solid #21262d',
