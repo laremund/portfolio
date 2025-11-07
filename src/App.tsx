@@ -77,21 +77,21 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16" style={{backgroundColor: '#0d1117'}}>
+      <section id="about" className="py-16 bg-[#0d1117]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12" style={{color: '#ffffff'}}>About Me</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-white">About Me</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-lg mb-6" style={{color: '#f0f6fc'}}>
+              <p className="text-lg mb-6 text-[#f0f6fc]">
                 I recently graduated from Utah State University with a degree in Human Experience Design
                 with a Computer Science emphasis.
               </p>
-              <p className="text-lg mb-6" style={{color: '#f0f6fc'}}>
+              <p className="text-lg mb-6 text-[#f0f6fc]">
                 I'm passionate about creating digital experiences that are both beautiful and functional. 
                 With experience in front-end development and UX/UI design, I bridge the gap between 
                 design and development.
               </p>
-              <p className="text-lg mb-6" style={{color: '#f0f6fc'}}>
+              <p className="text-lg mb-6 text-[#f0f6fc]">
                 I've worked on projects serving 25k+ users and generating $20M+ in revenue, 
                 giving me real-world experience in building scalable, user-focused applications. 
                 I'm always eager to learn new technologies and contribute to meaningful projects.
