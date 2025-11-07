@@ -20,13 +20,13 @@ export default function PortfolioCard({
   projectName 
 }: PortfolioCardProps) {
   return (
-    <div className="rounded-lg overflow-hidden portfolio-card" style={{backgroundColor: '#161b22', boxShadow: '0 10px 25px rgba(0, 0, 0, 0.5), 0 4px 10px rgba(0, 0, 0, 0.3)'}}>
+    <div className="rounded-lg overflow-hidden portfolio-card bg-[#161b22] shadow-[0_10px_25px_#00000080,0_4px_10px_#0000004D]">
       <div className={`bg-gradient-to-r ${gradientFrom} ${gradientTo} h-48 flex items-center justify-center`}>
         <span className="text-white text-lg font-semibold">{projectName}</span>
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2" style={{color: '#ffffff'}}>{title}</h3>
-        <p className="mb-4" style={{color: '#f0f6fc'}}>
+        <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
+        <p className="mb-4 text-[#f0f6fc]">
           {description}
         </p>
         <div className="flex flex-wrap gap-2 mb-4">

@@ -17,10 +17,10 @@ interface ButtonProps {
 }
 
 const variantClasses = {
-  primary: 'text-white focus:ring-blue-500',
-  secondary: 'text-white focus:ring-gray-500',
-  outline: 'border-2 text-white focus:ring-white',
-  ghost: 'focus:ring-blue-500'
+  primary: 'bg-[#0969da] text-white border border-[#0969da] hover:bg-[#0550ae] focus:ring-blue-500',
+  secondary: 'bg-[#21262d] text-white border border-[#21262d] hover:bg-[#30363d] focus:ring-gray-500',
+  outline: 'bg-transparent text-white border-2 border-white hover:bg-white hover:text-[#1e1e1e] focus:ring-white',
+  ghost: 'bg-transparent text-[#4fc1ff] border-none hover:text-[#6bb6ff] focus:ring-blue-500'
 };
 
 const sizeClasses = {
@@ -48,56 +48,6 @@ export default function Button({
   
   const buttonClasses = `${baseClasses} ${variantClass} ${sizeClass} ${className}`;
 
-  // Define VS Code-style button styles
-  const getButtonStyle = () => {
-    switch (variant) {
-      case 'primary':
-        return {
-          backgroundColor: '#0969da',
-          color: '#ffffff',
-          border: '1px solid #0969da'
-        };
-      case 'secondary':
-        return {
-          backgroundColor: '#21262d',
-          color: '#ffffff',
-          border: '1px solid #21262d'
-        };
-      case 'outline':
-        return {
-          backgroundColor: 'transparent',
-          color: '#ffffff',
-          border: '2px solid #ffffff'
-        };
-      case 'ghost':
-        return {
-          backgroundColor: 'transparent',
-          color: '#4fc1ff',
-          border: 'none'
-        };
-      default:
-        return {};
-    }
-  };
-
-  const getHoverStyle = () => {
-    switch (variant) {
-      case 'primary':
-        return { backgroundColor: '#0550ae' };
-      case 'secondary':
-        return { backgroundColor: '#30363d' };
-      case 'outline':
-        return { backgroundColor: '#ffffff', color: '#1e1e1e' };
-      case 'ghost':
-        return { color: '#6bb6ff' };
-      default:
-        return {};
-    }
-  };
-
-  const buttonStyle = getButtonStyle();
-  const hoverStyle = getHoverStyle();
-
   // If href is provided, render as anchor tag
   if (href) {
     return (
@@ -106,9 +56,6 @@ export default function Button({
         target={target}
         rel={rel}
         className={buttonClasses}
-        style={buttonStyle}
-        onMouseEnter={(e) => Object.assign(e.currentTarget.style, hoverStyle)}
-        onMouseLeave={(e) => Object.assign(e.currentTarget.style, buttonStyle)}
         onClick={onClick}
       >
         {children}
@@ -123,9 +70,6 @@ export default function Button({
       onClick={onClick}
       disabled={disabled}
       className={buttonClasses}
-      style={buttonStyle}
-      onMouseEnter={(e) => Object.assign(e.currentTarget.style, hoverStyle)}
-      onMouseLeave={(e) => Object.assign(e.currentTarget.style, buttonStyle)}
     >
       {children}
     </button>
