@@ -7,7 +7,7 @@ import { experienceData } from './components/ExperienceCard/experience'
 import Button from './components/Button/Button'
 import SkillChip from './components/SkillChip/SkillChip'
 import SnakeGame from './components/SnakeGame/SnakeGame'
-import profilePhoto from './assets/profile.jpeg'
+import headshotPhoto from './assets/headshot.jpg'
 
 function App() {
 
@@ -105,7 +105,7 @@ function App() {
             </div>
             <div className="flex items-center justify-center">
               <div className="w-100 h-100 rounded-lg overflow-hidden flex items-center justify-center">
-                <img src={profilePhoto} alt="Professional Photo" className="w-full h-full object-cover" />
+                <img src={headshotPhoto} alt="Professional Photo" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
