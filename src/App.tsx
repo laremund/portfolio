@@ -62,8 +62,7 @@ function App() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Lars Remund</h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90">Software Engineer & UX/UI Designer</p>
           <p className="text-lg mb-8 max-w-3xl mx-auto">
-            I specialize in software development and design and I have experience in React, TypeScript, 
-            and full-stack development. I'm passionate about creating user-centered digital experiences.
+            I specialize in Software Development & Design, and I'm passionate about building user-centered digital experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="#experience" variant="primary" size="lg">
@@ -88,7 +87,7 @@ function App() {
               </p>
               <p className="text-lg mb-6 text-[#f0f6fc]">
                 I'm passionate about creating digital experiences that are both beautiful and functional. 
-                With experience in front-end development and UX/UI design, I bridge the gap between 
+                With experience in Front End Development and UX/UI Design, I bridge the gap between 
                 design and development.
               </p>
               <p className="text-lg mb-6 text-[#f0f6fc]">
