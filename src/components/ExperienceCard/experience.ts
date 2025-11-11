@@ -43,8 +43,8 @@ export const experienceData: ExperienceData[] = [
     location: "Logan, Utah",
     duration: "Mar 2022 – May 2025",
     responsibilities: [
-      "Managed store website updates and ran the store using Computer and Electrical Engineering knowledge",
-      "Facilitated labs and projects with professors and grad students"
+      "Managed store website and ran the store using Computer & Electrical Engineering knowledge",
+      "Facilitated labs and projects with professors and graduate students"
     ]
   }
 ];
